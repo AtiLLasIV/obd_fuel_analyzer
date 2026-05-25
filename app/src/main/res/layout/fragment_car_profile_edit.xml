@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Карточка с формой -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Марка -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Марка"
+                    android:textSize="14sp"
+                    android:textColor="#6B7280" />
+
+                <EditText
+                    android:id="@+id/etBrand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Например, Toyota"
+                    android:inputType="textCapWords"
+                    android:layout_marginBottom="12dp"
+                    tools:text="Toyota" />
+
+                <!-- Модель -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Модель"
+                    android:textSize="14sp"
+                    android:textColor="#6B7280" />
+
+                <EditText
+                    android:id="@+id/etModel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Например, Corolla"
+                    android:inputType="textCapWords"
+                    android:layout_marginBottom="12dp"
+                    tools:text="Corolla" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Тип автомобиля"
+                    android:textSize="13sp"
+                    android:textColor="#6B7280" />
+
+                <Spinner
+                    android:id="@+id/spVehicleType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- Год выпуска -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Год выпуска"
+                    android:textSize="14sp"
+                    android:textColor="#6B7280" />
+
+                <EditText
+                    android:id="@+id/etCarYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Например, 2010"
+                    android:inputType="number"
+                    android:layout_marginBottom="12dp"
+                    tools:text="2015" />
+
+                <!-- Объём бака (опционально) -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Объём бака, л"
+                    android:textSize="14sp"
+                    android:textColor="#6B7280" />
+
+                <EditText
+                    android:id="@+id/etTankCapacity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Например, 55"
+                    android:inputType="numberDecimal"
+                    android:layout_marginBottom="12dp"
+                    tools:text="55" />
+
+                <!-- Текущий пробег -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Текущий пробег, км"
+                    android:textSize="14sp"
+                    android:textColor="#6B7280" />
+
+                <EditText
+                    android:id="@+id/etCurrentOdometer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Например, 120000"
+                    android:inputType="number"
+                    android:layout_marginBottom="4dp"
+                    tools:text="120000" />
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Используется как начальный пробег и синхронизируется с заправками."-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:textColor="#6B7280"-->
+<!--                    android:layout_marginBottom="12dp" />-->
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Кнопка сохранить -->
+        <Button
+            android:id="@+id/btnSaveCarProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Сохранить"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+</ScrollView>

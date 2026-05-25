@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Базовые -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Основной акцент (AppBar, активный таб и т.п.) -->
+    <color name="md_theme_primary">#5B8FD1</color>          <!-- бледно-синий -->
+    <color name="md_theme_secondary">#0F6804</color>          <!-- тёмно-зелёный -->
+    <color name="md_theme_secondary_light">#8FD18A</color>          <!-- светло-зелёный -->
+    <color name="md_theme_onPrimary">#FFFFFFFF</color>      <!-- белый текст на синем -->
+
+    <!-- Фон всего приложения -->
+    <color name="md_theme_background">#F6F7FA</color>       <!-- светлый серовато-синий фон -->
+    <color name="md_theme_onBackground">#111827</color>     <!-- тёмный текст -->
+
+    <!-- Поверхности (карточки, панели, bottom nav, toolbar) -->
+    <color name="md_theme_surface">#FFFFFFFF</color>        <!-- белый -->
+    <color name="md_theme_onSurface">#111827</color>        <!-- тёмный текст на белом -->
+
+    <!-- Для FAB и мягких акцентов -->
+    <color name="md_theme_secondaryContainer">#E3EDFF</color>      <!-- очень бледно-синий фон -->
+    <color name="md_theme_onSecondaryContainer">#102A57</color>   <!-- тёмно-синий значок "+" -->
+
+    <!-- Тонкие границы / разделители -->
+    <color name="md_theme_outline">#E0E4EE</color>
+
+    <!-- Ошибки -->
+    <color name="md_theme_error">#B00020</color>
+</resources>

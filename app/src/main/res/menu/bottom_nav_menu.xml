@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="?attr/colorSurface">
+
+    <item
+        android:id="@+id/carProfileViewFragment"
+        android:icon="@drawable/ic_bus_24"
+        android:title="Профиль" />
+
+    <item
+        android:id="@+id/refuelsListFragment"
+        android:icon="@drawable/ic_road_24"
+        android:title="Заправки" />
+
+    <item
+        android:id="@+id/statsFragment"
+        android:icon="@drawable/ic_analytics_24"
+        android:title="Статистика" />
+</menu>

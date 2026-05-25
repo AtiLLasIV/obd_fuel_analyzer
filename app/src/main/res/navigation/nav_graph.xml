@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/refuelsListFragment">
+
+    <fragment
+        android:id="@+id/refuelsListFragment"
+        android:name="com.diploma.fuelstats.presentation.refuels.RefuelsListFragment"
+        android:label="Заправки"
+        tools:layout="@layout/fragment_refuels_list" >
+        <action
+            android:id="@+id/action_refuelsListFragment_to_addRefuelFragment"
+            app:destination="@id/addRefuelFragment" />
+        <action
+            android:id="@+id/action_refuelsListFragment_to_carProfileViewFragment"
+            app:destination="@id/carProfileViewFragment" />
+        <action
+            android:id="@+id/action_refuelsListFragment_to_carProfileEditFragment"
+            app:destination="@id/carProfileEditFragment" />
+        <action
+            android:id="@+id/action_refuelsListFragment_to_statsFragment"
+            app:destination="@id/statsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addRefuelFragment"
+        android:name="com.diploma.fuelstats.presentation.refuels.AddRefuelFragment"
+        android:label="Добавить заправку"
+        tools:layout="@layout/fragment_add_refuel" />
+
+    <fragment
+        android:id="@+id/carProfileViewFragment"
+        android:name="com.diploma.fuelstats.presentation.car.CarProfileViewFragment"
+        android:label="Профиль авто"
+        tools:layout="@layout/fragment_car_profile_view" >
+        <action
+            android:id="@+id/action_carProfileViewFragment_to_carProfileEditFragment"
+            app:destination="@id/carProfileEditFragment" />
+        <action
+            android:id="@+id/action_carProfileViewFragment_to_authFragment"
+            app:destination="@id/authFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/carProfileEditFragment"
+        android:name="com.diploma.fuelstats.presentation.car.CarProfileEditFragment"
+        android:label="Редактирование профиля"
+        tools:layout="@layout/fragment_car_profile_edit" />
+
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.diploma.fuelstats.presentation.auth.AuthFragment"
+        android:label="Авторизация"
+        tools:layout="@layout/fragment_auth"/>
+
+    <fragment
+        android:id="@+id/statsFragment"
+        android:name="com.diploma.fuelstats.presentation.stats.StatsFragment"
+        android:label="Статистика"
+        tools:layout="@layout/fragment_stats" />
+</navigation>

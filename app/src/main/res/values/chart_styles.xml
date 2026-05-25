@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ConsumptionChartStyle">
+        <item name="layers">column</item>
+        <item name="showBottomAxis">true</item>
+        <item name="showStartAxis">true</item>
+    </style>
+
+    <style name="InstantConsumptionChartStyle">
+        <item name="layers">line</item>
+        <item name="showBottomAxis">true</item>
+        <item name="showStartAxis">true</item>
+    </style>
+
+</resources>

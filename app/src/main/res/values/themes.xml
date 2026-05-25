@@ -1,0 +1,30 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.FuelStats" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Основной акцент -->
+        <item name="colorPrimary">@color/md_theme_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_onPrimary</item>
+
+        <!-- Фон всего окна -->
+        <item name="android:colorBackground">@color/md_theme_background</item>
+        <item name="colorOnBackground">@color/md_theme_onBackground</item>
+
+        <!-- Поверхности (панели, карточки, BottomNav, Toolbar если надо) -->
+        <item name="colorSurface">@color/md_theme_surface</item>
+        <item name="colorOnSurface">@color/md_theme_onSurface</item>
+
+        <!-- FAB / вторичные контейнеры -->
+        <item name="colorSecondaryContainer">@color/md_theme_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/md_theme_onSecondaryContainer</item>
+
+        <!-- Разделители -->
+        <item name="colorOutline">@color/md_theme_outline</item>
+
+        <!-- Ошибка -->
+        <item name="colorError">@color/md_theme_error</item>
+
+    </style>
+
+    <style name="Theme.FuelStats" parent="Base.Theme.FuelStats" />
+</resources>

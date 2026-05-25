@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <!-- Первая строка: дата + литры -->
+    <TextView
+        android:id="@+id/tvPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        tools:text="01.02.2026 - 45.0 л" />
+
+    <!-- Вторая строка: пробег + полный/не полный бак -->
+    <TextView
+        android:id="@+id/tvSecondary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#6B7280"
+        android:textStyle="italic"
+        tools:text="Пробег: 120 000 км - Полный бак" />
+
+</LinearLayout>

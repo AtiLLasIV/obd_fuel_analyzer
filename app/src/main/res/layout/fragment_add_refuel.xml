@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Заголовок карточки -->
+                <TextView
+                    android:id="@+id/tvAddRefuelTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Новая заправка"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Одометр -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Пробег (км)"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etOdometer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="Например, 120000"
+                    android:layout_marginTop="4dp"
+                    tools:text="110000" />
+
+                <!-- Литры -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Залито топлива (л)"
+                    android:textSize="14sp"
+                    android:layout_marginTop="12dp" />
+
+                <EditText
+                    android:id="@+id/etLiters"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:hint="Например, 45.5"
+                    android:layout_marginTop="4dp"
+                    tools:text="40.0" />
+
+                <!-- Полный бак -->
+                <CheckBox
+                    android:id="@+id/cbFullTank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="До полного бака"
+                    android:layout_marginTop="12dp" />
+
+                <!-- Кнопка сохранить -->
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Сохранить" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>
