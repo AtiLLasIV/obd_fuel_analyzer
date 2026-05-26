@@ -1,0 +1,54 @@
+package com.lib.obd.command.temperature
+
+import com.lib.obd.command.ObdCommand
+import com.lib.obd.command.ObdRawResponse
+import com.lib.obd.command.bytesToInt
+
+private const val SINGLE_BYTE = 1
+private const val CELSIUS_OFFSET = 40f
+
+private fun calculateTemperature(rawValue: IntArray): Float =
+    bytesToInt(
+        rawValue,
+        bytesToProcess = SINGLE_BYTE,
+    ) - CELSIUS_OFFSET
+
+class AirIntakeTemperatureCommand : ObdCommand() {
+    override val tag = "AIR_INTAKE_TEMPERATURE"
+    override val name = "Air Intake Temperature"
+    override val mode = "01"
+    override val pid = "0F"
+
+    override val defaultUnit = "°C"
+    override val handler = { response: ObdRawResponse -> "%.1f".format(calculateTemperature(response.bufferedValue)) }
+}
+
+class AmbientAirTemperatureCommand : ObdCommand() {
+    override val tag = "AMBIENT_AIR_TEMPERATURE"
+    override val name = "Ambient Air Temperature"
+    override val mode = "01"
+    override val pid = "46"
+
+    override val defaultUnit = "°C"
+    override val handler = { response: ObdRawResponse -> "%.1f".format(calculateTemperature(response.bufferedValue)) }
+}
+
+class EngineCoolantTemperatureCommand : ObdCommand() {
+    override val tag = "ENGINE_COOLANT_TEMPERATURE"
+    override val name = "Engine Coolant Temperature"
+    override val mode = "01"
+    override val pid = "05"
+
+    override val defaultUnit = "°C"
+    override val handler = { response: ObdRawResponse -> "%.1f".format(calculateTemperature(response.bufferedValue)) }
+}
+
+class OilTemperatureCommand : ObdCommand() {
+    override val tag = "ENGINE_OIL_TEMPERATURE"
+    override val name = "Engine Oil Temperature"
+    override val mode = "01"
+    override val pid = "5C"
+
+    override val defaultUnit = "°C"
+    override val handler = { response: ObdRawResponse -> "%.1f".format(calculateTemperature(response.bufferedValue)) }
+}

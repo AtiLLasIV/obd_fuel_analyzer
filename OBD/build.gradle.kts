@@ -40,7 +40,6 @@ kotlin {
 
 dependencies {
     implementation(libs.kotlinx.coroutines.android)
-    implementation(libs.kotlin.obd.api)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
